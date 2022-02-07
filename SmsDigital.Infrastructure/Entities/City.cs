@@ -1,4 +1,5 @@
-﻿using SmsDigital.Enum;
+﻿using Newtonsoft.Json;
+using SmsDigital.Enum;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,6 +8,8 @@ namespace SmsDigital.Infrastructure.Entities
     public class City
     {
         public int Id { get; set; }
+
+        [JsonProperty("City")]
         public string Name { get; set; }
 
         public DateTime StartDate { get; set; }
